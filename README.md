@@ -31,12 +31,15 @@ MomoKanri is an intuitive and minimalist task management application. The projec
    git clone https://github.com/username/MomoKanri.git
 
 2. Navigate to the project folder:
+    ```bash
     cd MomoKanri
 
 3. Install dependencies:
+    ```bash
     npm install
 
 4. Run the project in development mode:
+    ```bash
     npm run dev
 
 5. Open your browser at the following address:
