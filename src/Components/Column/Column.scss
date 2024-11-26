@@ -1,0 +1,61 @@
+@import '../../settings.scss';
+
+.column
+{
+  flex  : 0 0 auto;
+  width : 300px;
+  height: calc(100% - #{$gap});
+
+  >*
+  {
+    background-color: $list-bg-color;
+    color           : #333;
+    padding         : 0 8px;
+  }
+
+  header
+  {
+    padding-left           : 15px;
+    height                 : $colomn-header-height;
+    line-height            : $colomn-header-height;
+    font-size              : 16px;
+    font-weight            : bold;
+    border-top-left-radius : $colomn-border-radius;
+    border-top-right-radius: $colomn-border-radius;
+  }
+
+  footer
+  {
+    padding-left              : 15px;
+    height                    : $colomn-footer-height;
+    line-height               : $colomn-footer-height;
+    border-bottom-left-radius : $colomn-border-radius;
+    border-bottom-right-radius: $colomn-border-radius;        
+  }
+
+  ul.card-list
+  {
+    list-style-type: none;
+    margin         : 0;
+    max-height     : calc(100% - #{$colomn-header-height} - #{$colomn-footer-height});
+    overflow-y     : auto;
+
+    &::-webkit-scrollbar
+    {
+      -webkit-appearance: none;
+    }
+
+    &::-webkit-scrollbar:vertical
+    {
+      width: 16px;
+    }
+
+    &::-webkit-scrollbar-thumb
+    {
+      background-color: darken($color: $list-bg-color, $amount: 15);
+      border          : 4px solid transparent;
+      border-radius   : 8px;
+      background-clip : padding-box;
+    }
+  }
+}

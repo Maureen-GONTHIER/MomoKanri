@@ -1,0 +1,26 @@
+@import '../../settings.scss';
+
+.board-columns
+{
+  display : flex;
+  margin  : $gap;
+  gap     : 10px;
+  overflow: auto;
+
+  &::-webkit-scrollbar
+  {
+    -webkit-appearance: none;
+  }
+
+  &::-webkit-scrollbar:horizontal
+  {
+    height: 11px;
+  }
+
+  &::-webkit-scrollbar-thumb
+  {
+    background-color: darken($color: $list-bg-color, $amount: 15);
+    border-radius   : 5px solid $list-bg-color;
+    background-clip : padding-box;
+  }
+}
